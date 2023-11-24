@@ -31,7 +31,6 @@ async function addRecipe(name, category, serves, difficulty, time, ingredients, 
     await client.close();
   }
 }
-
 // Select all from database.
 async function getAllRecipes() {
   try {
@@ -47,7 +46,6 @@ async function getAllRecipes() {
     await client.close();
   }
 }
-
 async function displayAllRecipes() {
   try {
     const allRecipes = await getAllRecipes();
@@ -56,7 +54,6 @@ async function displayAllRecipes() {
     console.error("Error fetching recipes:", error);
   }
 }
-
 // Select all from database like name value
 async function getRecipesByName(searchTerm) {
   try {
@@ -72,7 +69,6 @@ async function getRecipesByName(searchTerm) {
     await client.close();
   }
 }
-
 async function displayRecipesByName(searchTerm) {
   try {
     const recipes = await getRecipesByName(searchTerm);
@@ -81,7 +77,6 @@ async function displayRecipesByName(searchTerm) {
     console.error("Error fetching recipes by partial name:", error);
   }
 }
-
 // Select recipes by category
 async function getRecipesByCategory(category) {
   try {
@@ -97,7 +92,6 @@ async function getRecipesByCategory(category) {
     await client.close();
   }
 }
-
 async function displayRecipesByCategory(category) {
   try {
     const recipes = await getRecipesByCategory(category);
@@ -106,7 +100,6 @@ async function displayRecipesByCategory(category) {
     console.error("Error fetching recipes by category:", error);
   }
 }
-
 // Select recipes by difficulty
 async function getRecipesByInputDifficulty(inputDifficulty) {
   try {
@@ -123,7 +116,6 @@ async function getRecipesByInputDifficulty(inputDifficulty) {
     await client.close();
   }
 }
-
 async function displayRecipesByInputDifficulty(inputDifficulty) {
   try {
     const recipes = await getRecipesByInputDifficulty(inputDifficulty);
@@ -132,7 +124,6 @@ async function displayRecipesByInputDifficulty(inputDifficulty) {
     console.error("Error fetching recipes by input difficulty:", error);
   }
 }
-
 //Select recipes by how many it serves. gets all equal to and greater.
 async function getRecipesByServes(servesAmount) {
   try {
@@ -148,7 +139,6 @@ async function getRecipesByServes(servesAmount) {
     await client.close();
   }
 }
-
 async function displayRecipesByServes(servesAmount) {
   try {
     const recipes = await getRecipesByServes(servesAmount);
@@ -157,7 +147,6 @@ async function displayRecipesByServes(servesAmount) {
     console.error("Error fetching recipes by serves:", error);
   }
 }
-
 async function getRecipesByCookTimeLessThanAndEqual(maxCookTime) {
   try {
     await client.connect();
@@ -172,7 +161,6 @@ async function getRecipesByCookTimeLessThanAndEqual(maxCookTime) {
     await client.close();
   }
 }
-
 async function displayRecipesByCookTimeLessThanAndEqual(maxCookTime) {
   try {
     const recipes = await getRecipesByCookTimeLessThanAndEqual(maxCookTime);
@@ -181,7 +169,6 @@ async function displayRecipesByCookTimeLessThanAndEqual(maxCookTime) {
     console.error("Error fetching recipes by cook time:", error);
   }
 }
-
 async function getRecipesByCookTimeGreaterThanAndEqual(minCookTime) {
   try {
     await client.connect();
@@ -196,7 +183,6 @@ async function getRecipesByCookTimeGreaterThanAndEqual(minCookTime) {
     await client.close();
   }
 }
-
 async function displayRecipesByGreaterCookTime(minCookTime) {
   try {
     const recipes = await getRecipesByCookTimeGreaterThanAndEqual(minCookTime);
@@ -206,7 +192,6 @@ async function displayRecipesByGreaterCookTime(minCookTime) {
   }
 }
 
-displayRecipesByGreaterCookTime(40);
 
 
 
