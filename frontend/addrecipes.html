@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="./styles/addrecipes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="./components/NavBar.js"></script>
+</head>
+<body>
+    <header>
+        <div id="navbar"></div>
+        <main>
+    </header>
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Add a New Recipe</h1>
+        <form>
+            <div class="mb-3">
+                <label for="recipeName" class="form-label">Recipe Name</label>
+                <input type="text" class="form-control" id="recipeName" required>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input type="text" class="form-control" id="category" required>
+            </div>
+            <div class="mb-3">
+                <label for="serves" class="form-label">Serves</label>
+                <input type="number" class="form-control" id="serves" required>
+            </div>
+            <div class="mb-3">
+                <label for="difficulty" class="form-label">Difficulty</label>
+                <input type="text" class="form-control" id="difficulty" required>
+            </div>
+            <div class="mb-3">
+                <label for="cookTime" class="form-label">Cook Time (minutes)</label>
+                <input type="number" class="form-control" id="cookTime" required>
+            </div>
+            <div class="mb-3">
+                <label for="ingredients" class="form-label">Ingredients</label>
+                <textarea class="form-control" id="ingredients" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="instructions" class="form-label">Instructions</label>
+                <textarea class="form-control" id="instructions" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Recipe</button>
+        </form>
+    </div>
+</main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+</body>
+</html>
